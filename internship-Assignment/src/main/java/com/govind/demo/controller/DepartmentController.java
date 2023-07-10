@@ -19,6 +19,12 @@ public class DepartmentController {
 	@Autowired
 	private DepartmentService departmentService;
 	
+	
+	@GetMapping("/")
+	public String hello() {
+		return "Welcome Larch Soft Pvt Ltd to Govind Bhujbal Spring Boot CRUD Application !!!";
+	}
+	
 	@PostMapping("/departments")
 	public Department saveDepartment(@RequestBody Department department) {
 		return departmentService.saveDepartment(department);
